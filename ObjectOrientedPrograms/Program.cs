@@ -8,14 +8,17 @@ namespace ObjectOrientedPrograms
     {
         static void Main(string[] args)
         {
+            //Creating the Datamangement lsit
+
             List<DataManagement> list = new List<DataManagement>()
             {
+                //Adding the information to the list
                 new DataManagement("Rice", 1, 45),
                 new DataManagement("Pulses", 2, 100),
                 new DataManagement("Wheat", 3, 165),
             };
             
-
+            //Using JSON Converter Printing the information in the list
             var result = JsonConvert.SerializeObject(list,Formatting.Indented);
             Console.WriteLine(result);
             
@@ -33,5 +36,6 @@ namespace ObjectOrientedPrograms
                 this.Price = Price;
             }
         }
+
     }
 }
